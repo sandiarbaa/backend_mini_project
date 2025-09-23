@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('penjualans', function (Blueprint $table) {
             $table->id();
-            $table->string('kode_nota')->unique();
             $table->date('tgl');
             $table->foreignId('pelanggan_id')->constrained('pelanggans')->onDelete('cascade');
             $table->decimal('subtotal', 15, 2)->default(0);

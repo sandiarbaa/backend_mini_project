@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('pelanggans', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('domisili');
+            $table->enum('domisili', ['JAK-UT', 'JAK-BAR', 'JAK-SEL', 'JAK-TIM']);
             $table->enum('jenis_kelamin', ['PRIA', 'WANITA']);
             $table->timestamps();
         });
