@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pelanggan extends Model
 {
-    //
+    public function penjualans()
+    {
+        return $this->hasMany(Penjualan::class);
+    }
 }
